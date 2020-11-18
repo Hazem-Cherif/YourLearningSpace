@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "YourLearningSpace"
+    }
+  },
+  "defaultProject": "YourLearningSpace",
+  "cli": {
+    "analytics": false
+  }
 }
