@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpEventType, HttpResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  form: string;
-  constructor() { }
+
+  constructor(){}
 
   ngOnInit(): void {
   }
-
 }

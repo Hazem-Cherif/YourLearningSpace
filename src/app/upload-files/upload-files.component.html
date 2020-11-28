@@ -14,5 +14,33 @@
     </div>
   </div>
 </nav>
+<div class="container">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 
+        <div class="card-body">
+<div *ngIf="currentFile" class="progress">
+  <div
+    class="progress-bar progress-bar-info progress-bar-striped"
+    role="progressbar"
+    attr.aria-valuenow="{{ progress }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress + '%' }"
+  >
+    {{ progress }}%
+  </div>
+</div>
+
+<label class="btn btn-default">
+
+  <input type="file" (change)="selectFile($event)" />
+
+</label>
+
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+  Upload
+</button>
+
+<div class="alert alert-light" role="alert">{{ message }}</div>
+        </div></div></div>
 

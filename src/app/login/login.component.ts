@@ -11,14 +11,14 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  constructor(private serv: LoginserviceService, private  r: Router) {
+  }
   registerForm: FormGroup;
   email: string;
   password: string;
   u: User;
   listUser: User[];
   err: string;
-  constructor(private serv: LoginserviceService, private  r: Router) {
-  }
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -28,11 +28,6 @@ export class LoginComponent implements OnInit {
     });
     this.serv.getEmploye().subscribe(data => this.listUser = data);
   }
-
-  cancel() {
-    this.registerForm.reset();
-  }
-
   login() {
     for (let u of this.listUser) {
       if (this.registerForm.value.email === u.email && this.registerForm.value.password === u.password) {

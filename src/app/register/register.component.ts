@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit {
   }
   save() {
    this.serv.addEmploye(this.registerForm.value).subscribe(() => this.listUser = [this.registerForm.value, ...this.listUser]);
+   alert('hello new user :) ' + JSON.stringify(this.registerForm.value.nom));
   }
 
 }

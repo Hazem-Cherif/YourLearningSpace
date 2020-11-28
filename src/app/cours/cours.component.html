@@ -15,4 +15,19 @@
   </div>
 </nav>
 
+<div class="card">
+  <div class="card-header">List of Files</div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let file of fileInfos | async">
+    <div class="container">
+          <div class="card card-signin " >
+    <li class="list-group-item">
+      <a href="{{ file.url }}">{{ file.name }}</a>
+      <a class="d-block text-center mt-10 btn-secondary" [routerLink]="['detail',file.name]">Details       </a>
 
+    </li>
+      </div>
+    </div>
+  </ul>
+</div>
