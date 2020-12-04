@@ -1,0 +1,17 @@
+<app-parent-container></app-parent-container>
+
+<body >
+<div class="container  col-md-4">
+  <hr>
+  <h2>List des formations disponible</h2>
+  <hr>
+  <table class="table">
+
+    <tr *ngFor="let e of listFormation">
+
+      <td class="lead">Formation {{e.nom}}  disponible maintenant , Click sur detil pour avoir tout les information </td>
+      <td><button class="btn btn-dark"  [routerLink]="['detail',e.id]">Detail</button> </td>
+    </tr>
+  </table>
+</div>
+</body>

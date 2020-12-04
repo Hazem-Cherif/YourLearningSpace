@@ -6,5 +6,31 @@
       "email": "hazem.cherif1@esprit.tn",
       "password": "1234567"
     }
+  ],
+  "formations": [
+    {
+      "id": 1,
+      "nom": "Angular",
+      "dateD": "2020-12-14",
+      "dateF": "2020-12-16",
+      "NombreDePlaces": 20,
+      "local": "Esprit ghazala"
+    },
+    {
+      "id": 3,
+      "nom": "SpringBoot",
+      "dateD": "2020-12-16",
+      "dateF": "2020-12-18",
+      "Nombre de places": 20,
+      "local": "Esprit ghazala"
+    },
+    {
+      "id": 2,
+      "nom": "ASP.Net",
+      "dateD": "2020-12-15",
+      "dateF": "2020-12-17",
+      "Nombre de places": 20,
+      "local": "Esprit ghazala"
+    }
   ]
 }

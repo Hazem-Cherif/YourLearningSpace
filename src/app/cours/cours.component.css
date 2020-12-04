@@ -6,3 +6,6 @@
   border: 50px solid #ddd;
   line-height: 1em /* set to text height */
 }
+.container {
+  position: relative;
+}

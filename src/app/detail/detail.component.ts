@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {UploadFileService} from '../services/upload-file.service';
 import {Cours} from '../model/cours';
+import {Formation} from '../model/formation';
+import {FormationService} from '../services/formation.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -9,12 +12,10 @@ import {Cours} from '../model/cours';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  cours: Observable<any>;
-  product: Cours = new Cours();
-  constructor(private uploadService: UploadFileService) { }
+  formation: any = [];
+  constructor(private  serviceRoute: ActivatedRoute, private servFo: FormationService) { }
 
-  ngOnInit() {
-    this.cours = this.uploadService.getFiles();
+  ngOnInit(): void {
+    this.servFo.getFormationById(this.serviceRoute.snapshot.params.id).subscribe(data => {  this.formation = data;  });
   }
-
 }

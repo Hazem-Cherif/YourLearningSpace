@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { CoursComponent } from './cours/cours.component';
 import { DetailComponent } from './detail/detail.component';
+import { ParentContainerComponent } from './parent-container/parent-container.component';
+import { FormationComponent } from './formation/formation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DetailComponent } from './detail/detail.component';
     HomeComponent,
     UploadFilesComponent,
     CoursComponent,
-    DetailComponent
+    DetailComponent,
+    ParentContainerComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import {HomeComponent} from './home/home.component';
 import {UploadFilesComponent} from './upload-files/upload-files.component';
 import {CoursComponent} from './cours/cours.component';
 import {DetailComponent} from './detail/detail.component';
+import {FormationComponent} from './formation/formation.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'Upload', component: UploadFilesComponent},
   {path: 'Cours', component: CoursComponent},
-  {path: 'Cours/detail/:name', component: DetailComponent}
+  {path: 'formation', component: FormationComponent},
+  {path: 'formation/detail/:id', component: DetailComponent}
 ];
 
 @NgModule({
