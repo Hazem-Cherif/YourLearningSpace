@@ -9,7 +9,7 @@
 
     <tr *ngFor="let e of listFormation">
 
-      <td class="lead">Formation {{e.nom}}  disponible maintenant , Click sur detil pour avoir tout les information </td>
+      <td class="lead">Formation {{e.nom}}  disponible maintenant , Click sur detail pour avoir tout les information </td>
       <td><button class="btn btn-dark"  [routerLink]="['detail',e.id]">Detail</button> </td>
     </tr>
   </table>

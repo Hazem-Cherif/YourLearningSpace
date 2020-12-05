@@ -1,6 +1,6 @@
 <app-parent-container></app-parent-container>
 <br>
-<div class="contariner offset-5">
+<div class="contariner-fluid text-center offset-5 ">
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="../../assets/home.jpg" alt="Card image cap">
   <div class="card-body">
@@ -10,9 +10,11 @@
     <li class="list-group-item">Date Debut {{formation.dateD}}</li>
     <li class="list-group-item">Date Fin {{formation.dateF}}</li>
     <li class="list-group-item">Localisation {{formation.local}}</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Nombre de place disponible {{formation.NombreDePlaces}}</a>
+     <li class="list-group-item"> Nombre de place disponible {{formation.NombreDePlaces}}</li>
+    </ul>
+  <button class="btn btn-dark " type="submit" (click)="insc()">Inscrir</button>
+  {{err}}
+  {{succ}}
   </div>
 </div>
-</div>
+

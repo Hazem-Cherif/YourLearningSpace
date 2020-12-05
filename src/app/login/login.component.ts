@@ -27,10 +27,13 @@ export class LoginComponent implements OnInit {
       password: new FormControl('', [Validators.required])
     });
     this.serv.getEmploye().subscribe(data => this.listUser = data);
+    console.log(localStorage);
   }
   login() {
     for (let u of this.listUser) {
       if (this.registerForm.value.email === u.email && this.registerForm.value.password === u.password) {
+        localStorage.setItem('email', this.registerForm.value.email);
+        console.log(localStorage);
         this.r.navigate(['/home']);
       } else {
           this.err = 'hello , you need to register first Or your email and password are wrong  :)' ;

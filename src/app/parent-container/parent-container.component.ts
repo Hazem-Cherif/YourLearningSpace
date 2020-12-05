@@ -11,5 +11,7 @@ export class ParentContainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  remove(){
+    localStorage.removeItem('email');
+  }
 }

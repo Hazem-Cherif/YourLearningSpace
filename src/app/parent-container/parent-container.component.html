@@ -4,16 +4,17 @@
   <a class="navbar-brand" href="#">
     <img src="../../assets/logo.jpg" class="img-fluid w-25 "  alt="logo-esprit"  >
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse  flex-row-reverse" id="navbarNavAltMarkup">
     <div class="navbar-nav ">
       <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
       <a class="nav-link" routerLink="/Cours">Cours</a>
       <a class="nav-link" routerLink="/Upload">Upload</a>
       <a class="nav-link" routerLink="/formation">Formation</a>
-      <a class="nav-link" routerLink="/Login">Logout</a>
+      <a class="nav-link" (click)="remove()" routerLink="/Login">Logout </a>
     </div>
   </div>
 </nav>
