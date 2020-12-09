@@ -1,0 +1,81 @@
+<app-parent-container></app-parent-container>
+<hr>
+<div class="container">
+<h1>Add Formation Form</h1>
+<form #f="ngForm">
+  <div class="form-group">
+    <label>Id:</label>
+    <input type="number" name="id" class="form-control"
+           [(ngModel)]="formation.id" #i="ngModel" required>
+  </div>
+  <div class="alert alert-danger" *ngIf="i.touched && i.invalid">
+    id is required
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="formation.nom"
+           #t="ngModel" required minlength="3" pattern="[a-zA-Z]+$">
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    <div *ngIf="t.errors.required" >title is required</div>
+    <div *ngIf="t.errors.minlength" >title minlength is 3</div>
+    <div *ngIf="t.errors.pattern">message Pattern</div>
+  </div>
+  <div class="form-group">
+    <label>Date Debut:</label>
+    <input type="date" name="dated" class="form-control" [(ngModel)]="formation.dateD" #q="ngModel" required>
+  </div>
+  <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+    Date is required
+  </div>
+    <div class="form-group">
+      <label>Date Debut:</label>
+      <input type="date" name="datef" class="form-control" [(ngModel)]="formation.dateF" #c="ngModel" required>
+    </div>
+    <div class="alert alert-danger" *ngIf="c.touched && c.invalid">
+      Date is required
+    </div>
+  <div class="form-group">
+    <label>Numbre of Places:</label>
+    <input type="number" name="number" class="form-control" [(ngModel)]="formation.nbp" #g="ngModel" required>
+  </div>
+  <div class="alert alert-danger" *ngIf="g.touched && g.invalid">
+    Number is required
+  </div>
+  <div class="alert alert-danger" *ngIf="q.value<0 ||p.value==0">
+    Number >0
+  </div>
+    <div class="form-group">
+    <label>Place:</label>
+    <input type="text" name="place" class="form-control" [(ngModel)]="formation.local" #p="ngModel" required>
+  </div>
+  <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+    place is required
+  </div>
+
+  <button class="btn btn-success" [disabled]="f.invalid || q.value<0 " (click)="save()">
+    save
+  </button>
+</form>
+</div>
+
+<div class="container">
+  <div class="container  ">
+
+    <hr>
+    <h2>List des formations disponible</h2>
+    <hr>
+    <table class="table">
+      <tr><td> Formation </td><td> Date Debuit</td><td>Date Fin  </td><td> Nobmre de places</td><td>Local </td></tr>
+      <tr *ngFor="let e of listFormation " >
+        <td class="lead"> {{e.nom}}   </td>
+        <td class="lead"> {{e.dateD}}   </td>
+        <td class="lead">{{e.dateF}}   </td>
+        <td class="lead">  {{e.nbp}} </td>
+        <td class="lead">{{e.local}}  </td>
+        <td><button class="btn btn-dark"  [routerLink]="['editFormation',e.id]">Update</button> </td>
+        <td><button class="btn btn-dark"  (click)="delet(e.id)" >Delete</button> </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,3 +1,8 @@
 .container {
   top: 25%;
 }
+.search-formation {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}

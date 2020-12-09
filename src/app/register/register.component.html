@@ -40,9 +40,9 @@
             <div class="form-label-group">
               <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password">
               <label for="inputPassword">Password</label>
-              <div class="alert-danger" *ngIf="password.errors && password.touched">
-                <div *ngIf="password.errors.required"> the password is required </div>
-                <div *ngIf="password.errors.minLength"> password lenght >6</div>
+              <div class="alert-danger" *ngIf="password.invalid && password.touched">
+                <div *ngIf="password.errors.required"> the password is required and must be > 6 </div>
+                <div *ngIf="password.errors.minLength"> password length >6</div>
               </div>
             </div>
 <br>

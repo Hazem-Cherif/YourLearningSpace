@@ -5,12 +5,6 @@
       "nom": "hazemCherif",
       "email": "hazem.cherif1@esprit.tn",
       "password": "1234567"
-    },
-    {
-      "id": 11111111,
-      "nom": "hazemhazem",
-      "email": "hazem.cherif@esprit.tn",
-      "password": "1234567"
     }
   ],
   "formations": [
@@ -19,7 +13,7 @@
       "nom": "Angular",
       "dateD": "2020-12-16",
       "dateF": "2020-12-18",
-      "NombreDePlaces": 18,
+      "nbp": 20,
       "local": "Esprit ghazala"
     },
     {
@@ -27,15 +21,15 @@
       "nom": "SpringBoot",
       "dateD": "2020-12-16",
       "dateF": "2020-12-18",
-      "NombreDePlaces": 19,
+      "nbp": 20,
       "local": "Esprit ghazala"
     },
     {
       "id": 2,
-      "nom": "ASP.Net",
-      "dateD": "2020-12-15",
-      "dateF": "2020-12-17",
-      "NombreDePlaces": 20,
+      "nom": "ASPdotNet",
+      "dateD": "2020-12-16",
+      "dateF": "2020-12-18",
+      "nbp": 19,
       "local": "Esprit ghazala"
     }
   ],
@@ -44,16 +38,6 @@
       "email": "hazem.cherif1@esprit.tn",
       "formationId": 2,
       "id": 2
-    },
-    {
-      "email": "hazem.cherif1@esprit.tn",
-      "formationId": 1,
-      "id": 3
-    },
-    {
-      "email": "hazem.cherif@esprit.tn",
-      "formationId": 1,
-      "id": 4
     }
   ]
 }

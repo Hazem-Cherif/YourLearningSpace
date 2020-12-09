@@ -1,16 +1,26 @@
 <app-parent-container></app-parent-container>
 
 <body >
+
 <div class="container  col-md-4">
+  <form>
+    <div class="form-group">
+
+      <input type="string" id="inputFormation" class="form-control col-md-12" placeholder="Formation Name" [(ngModel)]="formation" [ngModelOptions]="{standalone: true}">
+
+    </div>
+  </form>
   <hr>
   <h2>List des formations disponible</h2>
   <hr>
   <table class="table">
 
-    <tr *ngFor="let e of listFormation">
-
+    <tr *ngFor="let e of listFormation " >
+      <div *ngIf="e.nom == formation || formation == null">
       <td class="lead">Formation {{e.nom}}  disponible maintenant , Click sur detail pour avoir tout les information </td>
       <td><button class="btn btn-dark"  [routerLink]="['detail',e.id]">Detail</button> </td>
+
+      </div>
     </tr>
   </table>
 </div>

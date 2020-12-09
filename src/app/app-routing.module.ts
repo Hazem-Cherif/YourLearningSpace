@@ -7,6 +7,8 @@ import {UploadFilesComponent} from './upload-files/upload-files.component';
 import {CoursComponent} from './cours/cours.component';
 import {DetailComponent} from './detail/detail.component';
 import {FormationComponent} from './formation/formation.component';
+import {FormationCrudComponent} from './formation-crud/formation-crud.component';
+import {EditFormationComponent} from './edit-formation/edit-formation.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'Upload', component: UploadFilesComponent},
   {path: 'Cours', component: CoursComponent},
   {path: 'formation', component: FormationComponent},
+  {path: 'formationCrud', component: FormationCrudComponent},
+  {path: 'formationCrud/editFormation/:id', component: EditFormationComponent},
   {path: 'formation/detail/:id', component: DetailComponent}
 ];
 

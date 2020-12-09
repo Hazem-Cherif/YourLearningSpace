@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormationService} from '../services/formation.service';
 import {Formation} from '../model/formation';
 
@@ -9,6 +9,9 @@ import {Formation} from '../model/formation';
 })
 export class FormationComponent implements OnInit {
   listFormation: Formation[];
+  formation: string;
+
+  @Input() formationInput: string;
   constructor(private servFo: FormationService) { }
 
   ngOnInit(): void {

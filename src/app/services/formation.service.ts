@@ -20,4 +20,10 @@ export class FormationService {
   updateFormation(formation: Formation): Observable<Formation>{
     return this.http.put<Formation>(this.url + formation.id , formation);
   }
+  addFormation(u: Formation){
+    return this.http.post(this.url, u);
+  }
+  deletFormation(id){
+    return this.http.delete(this.url + id);
+  }
 }

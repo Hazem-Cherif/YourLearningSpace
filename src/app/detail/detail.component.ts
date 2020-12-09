@@ -57,7 +57,7 @@ export class DetailComponent implements OnInit {
           () => this.inscr = [this.int, ...this.inscr]);
         this.servFo.updateFormation(this.formation).subscribe(data => {
           this.formation = data;
-          this.formation.NombreDePlaces = this.formation.NombreDePlaces - 1;
+          this.formation.nbp = this.formation.nbp - 1;
           this.servFo.updateFormation(this.formation).subscribe(data1 => {
             this.servFo.getFormationById(this.formation.id);
           });
